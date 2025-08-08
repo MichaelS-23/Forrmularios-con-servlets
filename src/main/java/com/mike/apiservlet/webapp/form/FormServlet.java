@@ -75,11 +75,6 @@ public class FormServlet extends HttpServlet {
                 out.println("</html>");
             }
         } else {
-//                errores.forEach(e -> {
-//                    out.println("<li>" + e + "</li>");
-//                });
-//                out.println("<p><a href=\"/webapp_form/index.jsp\">Volver</a></p>");
-
             req.setAttribute("errores", errores);
             getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
         }
